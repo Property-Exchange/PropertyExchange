@@ -118,9 +118,9 @@ function Chatbot() {
       return () => clearInterval(typingInterval);
     }
   }, [chatbotResponse]);
-
+  // ${isExpanded ? 'w-full h-full' : ''}
   return (
-    <div className={`mx-auto ${isExpanded ? 'w-4/4' : 'w-3/4'} bg-[#FFFFFF] py-2 px-1 bg-opacity-100 mb-16 rounded-lg border-1 border-[#D6D6E6]`}>
+    <div className={`m-4 mb-16 p-5 sm:h-96 rounded-xl bg-[#90a5dd]     `}>
       {isLoading ? (
         <>
         <div className="flex flex-row justify-start items-center text-lg my-2 mx-1">
@@ -183,7 +183,7 @@ function Chatbot() {
         </div>
       ) : (
         <>
-          <div className="flex flex-row justify-center items-center text-lg my-2 mx-auto">
+          <div className="flex flex-row flex-wrap justify-center items-center text-lg my-2 mx-auto">
             <RiStarSLine className="mx-2 text-[#B175E7] text-xl" /> You could
             try
           </div>
@@ -191,7 +191,7 @@ function Chatbot() {
 
           <div className="flex flex-col px-1">
 
-          <div className="flex flex-row justify-content:start w-10/12 mx-1 my-4 mx-auto flex-wrap">
+          <div className="flex flex-row justify-content:start w-10/12 mx-1 my-4  flex-wrap">
             <button
               className="text-[7px] bg-[#FFFFFF] p-1 rounded-full m-1 w-2/5 border border-blue-200 flex flex-row justify-center items-center"
 
@@ -210,7 +210,7 @@ function Chatbot() {
             
           </div>
 
-          <div className="flex flex-row justify-content:start w-10/12 mx-1 my-4 mx-auto flex-wrap">
+          <div className="flex flex-row justify-content:start w-10/12 mx-1 my-4  flex-wrap">
           <button
               className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 border border-blue-200 flex flex-row justify-center items-center"
               onClick={() => handleButtonClick("Top Projects in Delhi NCR")}

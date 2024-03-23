@@ -11,41 +11,45 @@ import Marquee from "react-fast-marquee";
 import Chatbot from "./chatbot/Chatbot";
 const Home = () => {
   return (
-    <section className="homepage pt-5">
-      <div className="flex items-center justify-center w-fit mx-auto border-1 shadow-md rounded-full bg-[#ffffff] border-[#D6D6E6] p-2 my-5 mb-16 ">
-        <p className="p-1 rounded-full px-5  sm:text-base text-[8px]  text-white bg-[#233B76] beviet">
+    <section className="homepage pt-5 bg-gradient-r-to   from-[#242166] ">
+      <div className="flex items-center justify-center w-fit mx-auto border-1 shadow-md rounded-full bg-[#ffffff] border-[#D6D6E6] p-2 my-5 mb-16 shadow-[#242166]   ">
+        <button className="p-1 rounded-full px-5  sm:text-base text-[12px] font-bold  text-white bg-[#233B76] beviet hover:bg-[#33477c] cursor-pointer hover:scale-80 hover:-translate-y-1 duration-300 transition ease-in-out delay-150">
           Get Listed
-        </p>
-        <p className="text-[#233B76] font-bold mx-1  sm:text-base text-[8px] beviet">
+        </button>
+        <button className="text-[#233B76]  mx-1  sm:text-base text-[12px] font-bold beviet hover:border-2 p-2 rounded-md cursor-pointer 
+        border-[#233B76] hover:-translate-y-1 duration-300 transition ease-in-out delay-150">
           Become Partner
-        </p>
+        </button>
         <FaArrowRight className="text-[#233B76] font-bold mx-1" />
       </div>
-      <h1 className="dm text-center text-2xl sm:text-5xl text-white sm:w-2/4 w-11/12 sm:text-center mx-auto font-semibold mt-[-20px]">
-        <span className="text-[#fff068e9]">Empowering</span> everyone to <br />{" "}
-        own and build <br /> <span className="text-[#fff068e9]">wealth</span>{" "}
-        through <span className="text-[#fff068e9]">Real Estate</span>
+        <h1 className="dm text-center text-2xl  text-white sm:w-3/4 w-11/12 sm:text-center mx-auto  font-sans   ">
+        <span className="text-[#fff068e9] font-bold ">Empowering</span> everyone to
+        own and build <br /> <span className="text-[#fff068e9] font-bold">wealth</span>{" "}
+        through  <span className="text-[#fff068e9] font-bold">Real Estate</span>
       </h1>
-      <p className="inter text-center text-sm sm:text-lg text-white sm:w-2/5 w-11/12 sm:text-center mx-auto my-3 sm:mb-24 mb-12">
-        Discover perfect properties, connect directly with builders, and make
-        informed investment decisions with ease - using advanced AI{" "}
+
+      <p className="inter text-center text-lg sm:text-2lg text-white
+      font-semibold sm:w-2/5 w-11/12 sm:text-center mx-auto my-3 sm:mb-24 mb-12">
+      Let AI search the right Property for you.
       </p>
+      <Chatbot />
+      <div className=" mb-20 rounded-lg   w-2/5 block mx-auto shadow-lg shadow-red-400 hover:-translate-y-2 duration-300 transition ease-in-out delay-150">
       <img
         src={Product}
-        className="sm:mb-20 mb-20 sm:mt-[-55px] mt-[-25px] sm:w-2/12 w-2/5 block mx-auto"
+        
         alt=""
       />
-      <Chatbot />
-      <div className=" bg-gradient-to-b from-transparent to-[#fefefe] bg-opacity-10 backdrop-blur-25px ">
-        <div className="bg-[#FFFFFF] py-2 pb-5 px-10   sm:w-3/5 w-11/12 mx-auto rounded-lg border-5 border-[#BCBCBC] shadow-lg relative top-5 ">
-          <p className="inter text-center font-semibold text-gray-600 my-3 text-lg">
+      </div>
+
+      <div className=" bg-white   ">
+        <div className=" py-2 pb-5 px-10   sm:w-3/5 w-11/12 mx-auto rounded-lg    top-5 ">
+          <p className="inter text-center font-semibold text-black my-3 text-lg font-sans">
             Trusted By Leaders From:
           </p>
           <Marquee
             pauseOnHover={true}
-            pauseOnClick={true}
-            speed={60}
-            gradientWidth={50}
+            speed={40}
+            gradientWidth={250}
             gradient={true}
           >
             <img src={Image1} className="mx-10 py-1 sm:h-14 h-10" alt="" />
